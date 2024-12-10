@@ -31,4 +31,10 @@ public class UserController {
         model.addAttribute("user", user);
         return "new_user";
     }
+
+    // Page de connexion (loginn)
+    @GetMapping("/loginn")
+    public String loginn() {
+        return "loginn"; // Affiche la page de connexion
+    }
 }

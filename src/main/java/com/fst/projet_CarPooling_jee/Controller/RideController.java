@@ -45,4 +45,10 @@ public class RideController {
         return "newRide";
     }
 
+    /*@GetMapping("/saveRide")
+    public String redirectToForm() {
+        return "redirect:/showNewRideForm";
+    }*/
+
+
 }

@@ -9,16 +9,16 @@
     <link href="/css/bootstrapCSS/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mt-4">
-        <h2 class="text-center">Save Ride</h2>
-        <form action="#" th:action="@{/saveRide}" th:object="${ride}" method="post" >
-            <input type="text" th:field="*{startLocation}" placeholder="start Location" class="form-control nb-4 col-4">
-            <input type="text" th:field="*{endLocation}" placeholder="end Location" class="form-control nb-4 col-4">
-            <input type="text" th:field="*{departureTime}" placeholder="start Location" class="form-control nb-4 col-4">
-            <input type="text" th:field="*{availableSeats}" placeholder="start Location" class="form-control nb-4 col-4">
-            <input type="text" th:field="*{pricePerSeat}" placeholder="start Location" class="form-control nb-4 col-4">
+<div class="container mt-4">
+    <h2 class="text-center">Save Ride</h2>
+    <form action="#" th:action="@{/saveRide}" th:object="${ride}" method="post" >
+        <input type="text" th:field="*{startLocation}" placeholder="start Location" class="form-control nb-4 col-4">
+        <input type="text" th:field="*{endLocation}" placeholder="end Location" class="form-control nb-4 col-4">
+        <input type="text" th:field="*{departureTime}" placeholder="start Location" class="form-control nb-4 col-4">
+        <input type="text" th:field="*{availableSeats}" placeholder="start Location" class="form-control nb-4 col-4">
+        <input type="text" th:field="*{pricePerSeat}" placeholder="start Location" class="form-control nb-4 col-4">
 
-        </form>
-    </div>
+    </form>
+</div>
 </body>
 </html>
