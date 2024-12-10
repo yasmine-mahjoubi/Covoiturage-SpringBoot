@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class UserController {
@@ -37,4 +38,11 @@ public class UserController {
     public String loginn() {
         return "loginn"; // Affiche la page de connexion
     }
+    @GetMapping("/AllUsers")
+    public String viewDrivers(Model model) {
+        List<User> drivers = userService.getAllUsers();
+        model.addAttribute("drivers", drivers);
+        return "AllUsers";
+    }
+
 }
