@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarPooling Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrapCSS/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Contenu -->
+<div class="container my-2">
+    <h1>Users List</h1>
+    <!-- a hyper link @ symbol: reference content path of your application (root app)-->
+    <a th:href ="@{/showNewUserForm}" class="btn btn-primary btn-sm mb-3">Add User</a>
+    <table border="1" class="table table-striped table-responsive-md">
+        <thead>
+            <tr>
+                <th>User First Name</th>
+                <th>User Last Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Phone Number</th>
+                <th>Role</th>
+                <th>Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- listUsers de UserController -->
+            <tr th:each="user : ${listUsers}">
+                <td th:text="${user.firstName}"></td>
+                <td th:text="${user.lastName}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.password}"></td>
+                <td th:text="${user.phoneNumber}"></td>
+                <td th:text="${user.averageRating}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap JS (avec Popper.js) -->
+<script src="/js/bootstrapJS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
