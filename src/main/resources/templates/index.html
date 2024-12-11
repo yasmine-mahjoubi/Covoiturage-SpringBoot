@@ -156,6 +156,16 @@
             align-items: center;
             gap: 5px;
         }
+
+        .circle-icon {
+            background-color: white;
+            color: #02b3ba;
+            border-radius: 50%;
+            padding: 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -167,10 +177,12 @@
     </div>
     <nav>
         <div class="search-bar">
-            <button th:onclick="'location.href=@{/searchRides}'"><i class="fas fa-search"></i></button>
+            <button onclick="location.href='/searchRides'">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
-        <button class="btn" th:onclick="'location.href=@{/showNewRideForm}'" style="background-color: #02b3ba; padding: 5px 15px; border: none; border-radius: 5px; color: white; cursor: pointer;">
-            <i class="fas fa-plus"></i> Publish Ride
+        <button class="btn" onclick="location.href='/showNewRideForm'" style="background-color: #02b3ba; padding: 5px 15px; border: none; border-radius: 5px; color: white; cursor: pointer;">
+            <span class="circle-icon"><i class="fas fa-plus"></i></span> Publish Ride
         </button>
         <a href="/loginn"><i class="fas fa-sign-in-alt"></i> Log In</a>
         <a href="/showNewUserForm"><i class="fas fa-user-plus"></i> Sign Up</a>
@@ -186,12 +198,12 @@
     <div class="content-card">
         <h3>Trust who you travel with</h3>
         <p>Check reviews, profiles, and IDs to know who you’re traveling with.</p>
-        <button th:onclick="'location.href=@{/AllUsers}'">View Drivers</button>
+        <button onclick="location.href='/AllUsers'">View Drivers</button>
     </div>
     <div class="content-card">
         <h3>Scroll, click, tap and go!</h3>
         <p>Book a ride in just a few clicks using our simple and secure platform.</p>
-        <button th:onclick="'location.href=@{/searchRides}'">Learn More</button>
+        <button onclick="location.href='/searchRides'">Learn More</button>
     </div>
 </section>
 
