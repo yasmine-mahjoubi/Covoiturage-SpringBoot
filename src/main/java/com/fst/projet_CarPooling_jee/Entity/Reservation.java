@@ -3,12 +3,15 @@ package com.fst.projet_CarPooling_jee.Entity;
 import com.fst.projet_CarPooling_jee.Entity.enums.ReservationStatus;
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer NbReservedPlaces;
+    private LocalDateTime ReservationDate;
     @Enumerated(EnumType.STRING)
     private ReservationStatus status; // ENUM : PENDING, CONFIRMED, CANCELED
 
@@ -63,6 +66,14 @@ public class Reservation {
 
     public void setRide(Ride ride) {
         this.ride = ride;
+    }
+
+    public LocalDateTime getReservationDate() {
+        return ReservationDate;
+    }
+
+    public void setReservationDate(LocalDateTime reservationDate) {
+        ReservationDate = reservationDate;
     }
 }
 

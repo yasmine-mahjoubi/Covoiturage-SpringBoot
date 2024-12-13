@@ -40,4 +40,11 @@ public class ReservationController {
         reservationService.updateReservationStatus(id, status);
         return "redirect:/reservations"; // Redirection après la mise à jour
     }
+
+    @PostMapping("/deleteReservation")
+    public String deleteReservation(@RequestParam("id") Long id) {
+        reservationService.deleteReservation(id);
+        return "redirect:/reservations";
+    }
+
 }
