@@ -2,7 +2,7 @@ package com.fst.projet_CarPooling_jee.Controller;
 
 import com.fst.projet_CarPooling_jee.Entity.Reservation;
 import com.fst.projet_CarPooling_jee.Entity.enums.ReservationStatus;
-import com.fst.projet_CarPooling_jee.Service.ReservationService;
+import com.fst.projet_CarPooling_jee.Service.impl.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
