@@ -63,7 +63,8 @@ public class UserController {
         } else {
             System.out.println("Authentication failed.");
             model.addAttribute("error", "Email or password incorrect.");
-            return "redirect:/loginn"; // Retourner à la page de connexion
+            return "loginn";
+// Retourner à la page de connexion
         }
     }
 
