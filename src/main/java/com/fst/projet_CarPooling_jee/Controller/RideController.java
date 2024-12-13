@@ -26,7 +26,7 @@ public class RideController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/showNewRidesForm")
+    @GetMapping("/showNewRideForm")
     public String showNewRidesForm(Model model, HttpSession session){
         // Vérifier si l'utilisateur est connecté
         if (session.getAttribute("loggedInUserId") == null) {
